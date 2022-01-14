@@ -6,24 +6,23 @@ USE ProyectManagement;
 
 CREATE TABLE Sex(
   idSex TINYINT IDENTITY(1, 1) PRIMARY KEY,
-  [description] VARCHAR(15) NOT NULL,
+  descriptionS VARCHAR(15) NOT NULL,
 );
 
 CREATE TABLE Trimester(
   idTrimester TINYINT IDENTITY(1, 1) PRIMARY KEY,
-  [description] VARCHAR(50) NOT NULL,
+  descriptionT VARCHAR(50) NOT NULL,
 );
 
 CREATE TABLE Departament(
   idDepartment TINYINT IDENTITY(1, 1) PRIMARY KEY,
-  [description] VARCHAR(30) NOT NULL,
-  [state] BIT DEFAULT 1 NOT NULL
+  descriptionD VARCHAR(30) NOT NULL,
+  stateD BIT DEFAULT 1 NOT NULL
 );
 
 CREATE TABLE FunctionaryType(
   idFunctionaryType TINYINT IDENTITY(1, 1) PRIMARY KEY,
-  [description] VARCHAR(15) NOT NULL,
-  [state] BIT DEFAULT 1 NOT NULL
+  descriptionFT VARCHAR(15) NOT NULL
 );
 
 CREATE TABLE Functionary(
@@ -32,14 +31,14 @@ CREATE TABLE Functionary(
   idDepartment TINYINT NOT NULL,
   idFunctionaryType TINYINT NOT NULL,
 
-  [name] VARCHAR(15) NOT NULL,
+  nameF VARCHAR(15) NOT NULL,
   surName VARCHAR(15) NOT NULL,
   lastName VARCHAR(15) NOT NULL,
   birthday DATE NOT NULL,
   email VARCHAR(50) UNIQUE NOT NULL,
   pass VARBINARY(MAX) NOT NULL,
   urlPhoto VARCHAR(180) NOT NULL,
-  [state] BIT DEFAULT 1 NOT NULL,
+  stateF BIT DEFAULT 1 NOT NULL,
   secretUrl VARCHAR(60) NOT NULL
 
   CONSTRAINT FuncionarySex -- Funcionary_Sex
@@ -64,7 +63,7 @@ CREATE TABLE Solicitation(
   startDate DATE NOT NULL,
   endingDate DATE NOT NULL,
   document VARBINARY(MAX) NOT NULL,
-  [state] BIT default 1 NOT NULL,
+  stateS BIT default 1 NOT NULL,
   finished BIT default 0 NOT NULL,
   
   CONSTRAINT FuncionaryASolicitation
@@ -87,7 +86,7 @@ CREATE TABLE Advance(
   idSolicitation SMALLINT NOT NULL,
   advanceDate SMALLDATETIME NOT NULL,
   document VARBINARY(MAX) NOT NULL,
-  [state] BIT default 1 NOT NULL,
+  stateA BIT default 1 NOT NULL,
 
   CONSTRAINT AdvanceTrimester 
   FOREIGN KEY (idTrimester) 
@@ -102,9 +101,9 @@ CREATE TABLE Advance(
   REFERENCES Functionary(idFunctionary)
 );
 
-CREATE TABLE [Transaction](
+CREATE TABLE TransactionAll(
   idTransaction TINYINT IDENTITY(1, 1) PRIMARY KEY,
-  [description] VARCHAR(50) NOT NULL
+  descriptionT VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Binnacle(
@@ -117,7 +116,7 @@ CREATE TABLE Binnacle(
 
   CONSTRAINT BinnacleTransaction 
   FOREIGN KEY (idTransaction) 
-  REFERENCES [Transaction](idTransaction),
+  REFERENCES TransactionAll(idTransaction),
   
   CONSTRAINT BinnacleFunctionaryA
   FOREIGN KEY (idFunctionaryA) 
@@ -132,24 +131,20 @@ CREATE TABLE Binnacle(
   REFERENCES Solicitation(idSolicitation)
 );
 
-
-
 CREATE TABLE SignIn(
   idFunctionary SMALLINT PRIMARY KEY,
-  [ip] VARCHAR(16) NOT NULL
+  ipFunctionary VARCHAR(16) NOT NULL
 
-   CONSTRAINT SignInFunctionary
+  CONSTRAINT SignInFunctionary
   FOREIGN KEY (idFunctionary) 
   REFERENCES Functionary(idFunctionary)
 );
 
-drop table notification
-
-CREATE TABLE [Notification](
+CREATE TABLE NotificationLogin(
   idNotification SMALLINT IDENTITY(1, 1) PRIMARY KEY,
   idFunctionary SMALLINT NOT NULL,
-  [description] VARCHAR(100) NOT NULL,
-  [ip] VARCHAR(16) NOT NULL
+  descriptionN VARCHAR(100) NOT NULL,
+  ipFunctionary VARCHAR(16) NOT NULL
 
   CONSTRAINT NotificationSignIn
   FOREIGN KEY (idFunctionary) 

@@ -1463,7 +1463,7 @@
 									"top": 357,
 									"width": 233,
 									"height": 13,
-									"text": "Transaction:"
+									"text": "TransactionAll"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -2113,9 +2113,9 @@
 									"font": "Arial;13;1",
 									"left": 1016,
 									"top": 845,
-									"width": 225.48876953125,
+									"width": 228.3896484375,
 									"height": 13,
-									"text": "Notification"
+									"text": "NotificationLogin"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -2139,7 +2139,7 @@
 											"font": "Arial;13;0",
 											"left": 1021,
 											"top": 868,
-											"width": 215.48876953125,
+											"width": 218.3896484375,
 											"height": 13
 										},
 										{
@@ -2154,7 +2154,7 @@
 											"font": "Arial;13;0",
 											"left": 1021,
 											"top": 883,
-											"width": 215.48876953125,
+											"width": 218.3896484375,
 											"height": 13
 										},
 										{
@@ -2169,7 +2169,7 @@
 											"font": "Arial;13;0",
 											"left": 1021,
 											"top": 898,
-											"width": 215.48876953125,
+											"width": 218.3896484375,
 											"height": 13
 										},
 										{
@@ -2184,21 +2184,21 @@
 											"font": "Arial;13;0",
 											"left": 1021,
 											"top": 913,
-											"width": 215.48876953125,
+											"width": 218.3896484375,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1016,
 									"top": 863,
-									"width": 225.48876953125,
+									"width": 228.3896484375,
 									"height": 68
 								}
 							],
 							"font": "Arial;13;0",
 							"left": 1016,
 							"top": 840,
-							"width": 225.48876953125,
+							"width": 228.3896484375,
 							"height": 91,
 							"nameLabel": {
 								"$ref": "AAAAAAF+S5TM2fJGbLI="
@@ -2403,7 +2403,7 @@
 										"$ref": "AAAAAAF+TMxYlhiimI0="
 									},
 									"font": "Arial;13;0",
-									"left": 1265,
+									"left": 1268,
 									"top": 843,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -2438,7 +2438,7 @@
 								"$ref": "AAAAAAF+S5TM2fJFAxE="
 							},
 							"lineStyle": 2,
-							"points": "1240:864;1312:864;1312:716",
+							"points": "1243:864;1312:864;1312:716",
 							"nameLabel": {
 								"$ref": "AAAAAAF+TMxYlhijLfs="
 							},
@@ -2701,7 +2701,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74e2/rbS05nk="
 							},
-							"name": "state",
+							"name": "stateS",
 							"type": "BIT",
 							"length": 0
 						},
@@ -3036,7 +3036,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74fh4/LU+pd8="
 							},
-							"name": "name",
+							"name": "nameF",
 							"type": "VARCHAR",
 							"length": "15"
 						},
@@ -3107,7 +3107,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74fh4/LU+pd8="
 							},
-							"name": "state",
+							"name": "stateF",
 							"type": "BIT",
 							"length": 0
 						},
@@ -3148,7 +3148,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74f0m9LZmDdI="
 							},
-							"name": "description",
+							"name": "descriptionD",
 							"type": "VARCHAR",
 							"length": "30"
 						},
@@ -3158,7 +3158,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74f0m9LZmDdI="
 							},
-							"name": "state",
+							"name": "stateD",
 							"type": "BIT",
 							"length": 0
 						}
@@ -3189,7 +3189,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74f4h3raHpwI="
 							},
-							"name": "description",
+							"name": "descriptionS",
 							"type": "VARCHAR",
 							"length": "15"
 						}
@@ -3220,7 +3220,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74gAB97bZvi8="
 							},
-							"name": "description",
+							"name": "descriptionFT",
 							"type": "VARCHAR",
 							"length": "15"
 						}
@@ -3481,7 +3481,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74gFNCLcNF3Y="
 							},
-							"name": "state",
+							"name": "stateA",
 							"type": "BIT",
 							"length": 0
 						}
@@ -3512,7 +3512,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74gIby7dFJPA="
 							},
-							"name": "description",
+							"name": "descriptionT",
 							"type": "VARCHAR",
 							"length": "50"
 						}
@@ -3778,7 +3778,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF74ewV2rRPKEg="
 					},
-					"name": "Transaction:",
+					"name": "TransactionAll",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -3856,7 +3856,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF74gOIqbeulKA="
 							},
-							"name": "description",
+							"name": "descriptionT",
 							"type": "VARCHAR",
 							"length": "50"
 						}
@@ -3974,7 +3974,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF+S5Gcp/IEyOU="
 							},
-							"name": "ip",
+							"name": "ipFuncionary",
 							"type": "VARCHAR",
 							"length": "16"
 						}
@@ -3994,7 +3994,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF74ewV2rRPKEg="
 					},
-					"name": "Notification",
+					"name": "NotificationLogin",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -4054,7 +4054,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF+S5TM2fJDkCc="
 							},
-							"name": "description",
+							"name": "descriptionN",
 							"type": "VARCHAR",
 							"length": "100"
 						},
@@ -4064,7 +4064,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF+S5TM2fJDkCc="
 							},
-							"name": "ip",
+							"name": "ipFunctionary",
 							"type": "VARCHAR",
 							"length": "16"
 						}
